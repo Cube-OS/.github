@@ -69,13 +69,6 @@ or with cross compiler
 
 `cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires KubOS SDK)
 
-**GraphQL:**
-
-`cargo build --features graphql`
-
-or with cross complier 
-
-`cargo kubos -c build --target kubos-linux-isis-gcc -- --release --features graphql` 
 
 **Ground:**
 
