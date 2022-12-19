@@ -102,4 +102,4 @@ CubeOS uses git ssh URL's for dependencies within the Organisation. Pls make sur
 
 **add key (in repo)**
 `ssh-add ~/.ssh/$your-key`
-e.g. ssh-add ~/.ssh/id_rsa
+e.g. ssh-add ./.ssh/id_rsa
