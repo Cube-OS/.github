@@ -67,15 +67,8 @@ As shown above, **cubeos-service** uses features so the user can decide the use 
 
 or with cross compiler
 
-`cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires KubOS SDK)
-
-**GraphQL:**
-
-`cargo build --features graphql`
-
-or with cross complier 
-
-`cargo kubos -c build --target kubos-linux-isis-gcc -- --release --features graphql` 
+OBC: `cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires KubOS SDK)
+BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release`
 
 **Ground:**
 
