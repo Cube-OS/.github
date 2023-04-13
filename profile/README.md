@@ -37,13 +37,13 @@ Error handling for Services on Cube-OS
 
 ### HAL
 I2C
-[rust-i2c](https://github.com/Cube-OS/rust-i2c) 
+[i2c-rs](https://github.com/Cube-OS/i2c-rs) 
 
 UART
-[rust-uart](https://github.com/Cube-OS/rust-uart) 
+[uart-rs](https://github.com/Cube-OS/uart-rs) 
 
 UDP
-[rust-udp](https://github.com/Cube-OS/rust-udp) 
+[udp-rs](https://github.com/Cube-OS/udp-rs) 
 
 SPI
 !!!TODO
