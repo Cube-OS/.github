@@ -21,10 +21,12 @@ On this page you find all the repositories you need to run your own satellite.
 
 ## Cube-OS SDK
 Please follow the instructions provided in the repository to install the Cube-OS SDK
+
 [cubeos-dev](https://github.com/Cube-OS/cubeos-dev)
 
 ## Cube-OS framework
 [cubeos-service](https://github.com/Cube-OS/cubeos-service)  
+
 API for Services on Cube-OS. Please read the README file before making your own code.  
 
 ## Cube-OS Payload APIs, Services and Apps + Interactions
@@ -35,15 +37,19 @@ The API describes how the OBC interacts with the payload.
 [example-api](https://github.com/Cube-OS/example-api)
 
 The Service can be compiled for use on the satellite and as a ground station twin. On the satellite the service allows Apps and the satellite controller on the ground to interact with the payload. The ground station twin enables the communication with the satellite service by translating JSON commands from the command line interface to UDP commands.
+
 [example-service](https://github.com/Cube-OS/example-service)
 
 The App enables autonomy on the satellite. During the mission the controller will schedule Apps for execution to run payloads autonomously in orbit.
+
 [example-app](https://github.com/Cube-OS/example-app)
 
 The command line interface (CLI) enables the user to send commands and receive telemetry from the satellite.
+ 
 [cli](https://github.com/Cube-OS/cli)
 
 The WebApp is a graphical version of the CLI.
+
 !!!TODO
 
 ## Compile your service (requires rust 1.55.0 or above)
@@ -56,6 +62,7 @@ As shown above, **cubeos-service** uses features so the user can decide the use 
 or with cross compiler
 
 OBC: `cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires KubOS SDK)
+
 BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release` (requires KubOS SDK)
 
 **Ground:**
@@ -63,7 +70,9 @@ BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release` (re
 `cargo build --features ground`
 
 Additionally the UDP handling and Ground features can be combined with **debug**, e.g.:
+
 `cargo build --features debug`
+
 `cargo build --features ground,debug`
 
 ## Run a service
@@ -83,4 +92,5 @@ CubeOS uses git ssh URL's for dependencies within the Organisation. Pls make sur
 
 **add key (in repo)**
 `ssh-add ~/.ssh/$your-key`
+
 e.g. ssh-add ./.ssh/id_rsa
