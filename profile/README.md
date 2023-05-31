@@ -21,42 +21,30 @@ On this page you find all the repositories you need to run your own satellite.
 
 ## Cube-OS SDK
 Please follow the instructions provided in the repository to install the Cube-OS SDK
-
 [cubeos-dev](https://github.com/Cube-OS/cubeos-dev)
-<!-- *insert missing links*
- -->
+
 ## Cube-OS framework
 [cubeos-service](https://github.com/Cube-OS/cubeos-service)  
 API for Services on Cube-OS. Please read the README file before making your own code.  
-  
-[system-api](https://github.com/Cube-OS/system-api)  
-Helper API for performing various general system actions
 
-[cubeos-error](https://github.com/Cube-OS/cubeos-error)  
-Error handling for Services on Cube-OS 
+## Cube-OS Payload APIs, Services and Apps + Interactions
+Here's an example how to write an API, Service and App for your Payload or Subsystem.
 
-### HAL
-I2C
-[i2c-rs](https://github.com/Cube-OS/i2c-rs) 
+The API describes how the OBC interacts with the payload.
 
-UART
-[uart-rs](https://github.com/Cube-OS/uart-rs) 
-
-UDP
-[udp-rs](https://github.com/Cube-OS/udp-rs) 
-
-SPI
-!!!TODO
-
-<!-- *insert missing links*
- -->
-## Cube-OS Payload APIs, Services and Apps
 [example-api](https://github.com/Cube-OS/example-api)
 
+The Service can be compiled for use on the satellite and as a ground station twin. On the satellite the service allows Apps and the satellite controller on the ground to interact with the payload. The ground station twin enables the communication with the satellite service by translating JSON commands from the command line interface to UDP commands.
 [example-service](https://github.com/Cube-OS/example-service)
 
+The App enables autonomy on the satellite. During the mission the controller will schedule Apps for execution to run payloads autonomously in orbit.
 [example-app](https://github.com/Cube-OS/example-app)
-<!-- *insert missing links* -->
+
+The command line interface (CLI) enables the user to send commands and receive telemetry from the satellite.
+[cli](https://github.com/Cube-OS/cli)
+
+The WebApp is a graphical version of the CLI.
+!!!TODO
 
 ## Compile your service (requires rust 1.55.0 or above)
 As shown above, **cubeos-service** uses features so the user can decide the use case at compile time.
@@ -68,7 +56,7 @@ As shown above, **cubeos-service** uses features so the user can decide the use 
 or with cross compiler
 
 OBC: `cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires KubOS SDK)
-BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release`
+BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release` (requires KubOS SDK)
 
 **Ground:**
 
