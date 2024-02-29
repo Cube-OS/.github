@@ -65,15 +65,15 @@ OBC: `cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires
 
 BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release` (requires KubOS SDK)
 
-**Ground:**
+**terminal:**
 
-`cargo build --features ground`
+`cargo build --features terminal`
 
-Additionally the UDP handling and Ground features can be combined with **debug**, e.g.:
+Additionally the UDP handling and terminal features can be combined with **debug**, e.g.:
 
 `cargo build --features debug`
 
-`cargo build --features ground,debug`
+`cargo build --features terminal,debug`
 
 ## Run a service
 To run a service simply transfer the executable to the satellite or ground station to a desired folder (e.g. /home/kubos/) and run:
