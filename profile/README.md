@@ -52,7 +52,7 @@ The WebApp is a graphical version of the CLI.
 
 !!!TODO
 
-## Compile your service (requires rust 1.55.0 or above)
+## Compile your service (requires rust 1.69.0 or above)
 As shown above, **cubeos-service** uses features so the user can decide the use case at compile time.
 
 **UDP handling**
