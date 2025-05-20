@@ -61,6 +61,15 @@ As shown above, **cubeos-service** uses features so the user can decide the use 
 
 or with cross compiler
 
+!!!!! NEW !!!!!
+Use [cross](https://github.com/cross-rs/cross) which makes the SDK obsolete. Once set up use as follows:
+
+OBC: `cross build --release --target=armv5te-unknown-linux-gnueabi`
+
+BBB: `cross build --release --target=arm-unknown-linux-gnueabihf`
+
+PI: `cross build --release --target=armv7-unknown-linux-musleabihf` (WARNING NOT TESTED)
+
 OBC: `cargo kubos -c build --target kubos-linux-isis-gcc -- --release` (requires KubOS SDK)
 
 BBB: `cargo kubos -c build --target kubos-linux-beaglebone-gcc -- --release` (requires KubOS SDK)
